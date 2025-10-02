@@ -1,20 +1,19 @@
 //문제 설명
-//정수 num1과 num2가 주어질 때, num1과 num2의 합을 return하도록 soltuion 함수를 완성해주세요.
-//
-// 제한사항
-// -50,000 ≤ num1 ≤ 50,000
-// -50,000 ≤ num2 ≤ 50,000
+//정수 num1, num2가 매개변수 주어집니다. num1과 num2를 곱한 값을 return 하도록 solution 함수를 완성해주세요.
+//제한사항
+//0 ≤ num1 ≤ 100
+//0 ≤ num2 ≤ 100
 
 public class Main {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.solution(5,1));
+        System.out.println(solution.solution(4,5));
     }
 }
 
 class Solution {
     public int solution(int num1, int num2) {
-        int answer = num1 - num2;
+        int answer = num1 * num2;
         return answer;
     }
 }
