@@ -1,22 +1,19 @@
 // 문제 설명
-// 정수 num1과 num2가 매개변수로 주어집니다. 두 수가 같으면 1 다르면 -1을 retrun하도록 solution 함수를 완성해주세요.
+// 정수 num1, num2가 매개변수로 주어질 때, num1를 num2로 나눈 나머지를 return 하도록 solution 함수를 완성해주세요.
 // 제한사항
-// 0 ≤ num1 ≤ 10,000
-// 0 ≤ num2 ≤ 10,000
+// 0 < num1 ≤ 100
+// 0 < num2 ≤ 100
 
 public class Main {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.solution(5,5));
+        System.out.println(solution.solution(10,4));
     }
 }
 
 class Solution {
     public int solution(int num1, int num2) {
-        if (num1 == num2) {
-            return 1;
-        } else {
-            return -1;
-        }
+        int answer = num1 % num2;
+        return answer;
     }
 }
