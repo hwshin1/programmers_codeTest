@@ -1,21 +1,33 @@
 // 문제 설명
-// 머쓱이는 선생님이 몇 년도에 태어났는지 궁금해졌습니다.
-// 2022년 기준 선생님의 나이 age가 주어질 때, 선생님의 출생 연도를 return 하는 solution 함수를 완성해주세요.
+// 각에서 0도 초과 90도 미만은 예각, 90도는 직각, 90도 초과 180도 미만은 둔각 180도는 평각으로 분류합니다.
+// 각 angle이 매개변수로 주어질 때 예각일 때 1, 직각일 때 2, 둔각일 때 3, 평각일 때 4를 return하도록 solution 함수를 완성해주세요.
+// 예각 : 0 < angle < 90
+// 직각 : angle = 90
+// 둔각 : 90 < angle < 180
+// 평각 : angle = 180
+
 // 제한사항
-// 0 < age ≤ 120
-// 나이는 태어난 연도에 1살이며 매년 1월 1일마다 1살씩 증가합니다.
+// 0 < angle ≤ 180
+// angle은 정수입니다.
 
 public class Main {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int numbers = 30;
+        int numbers = 120;
         System.out.println(solution.solution(numbers));
     }
 }
 
 class Solution {
-    public int solution(int age) {
-        int result = 2022 - (age - 1);
-        return result;
+    public int solution(int angle) {
+        if (angle > 0 && angle < 90) {
+            return 1;
+        } else if (angle == 90) {
+            return 2;
+        } else if (angle > 90 && angle < 180) {
+            return 3;
+        } else {
+            return 4;
+        }
     }
 }
