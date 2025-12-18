@@ -19,7 +19,7 @@ class Solution {
             }
         }
         if(answer.length() < 3){
-            for(int i = answer.length(); i < 4; i++) answer += "o";
+            answer += "o";
         }
         if(answer.length() > 8){
             answer = answer.substring(0, 8);
